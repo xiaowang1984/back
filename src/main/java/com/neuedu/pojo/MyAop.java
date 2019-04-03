@@ -11,10 +11,6 @@ import java.util.List;
 @Aspect
 @Component
 public class MyAop {
-    @Before("execution(* com.neuedu.controller.*.*(..))")
-    public void before(){
-        System.out.println("方法调用前");
-    }
 
     @AfterReturning("execution(* com.neuedu.controller.*.*(..))")
     public void after(){
