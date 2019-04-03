@@ -12,10 +12,7 @@ import java.util.List;
 @Component
 public class MyAop {
 
-    @AfterReturning("execution(* com.neuedu.controller.*.*(..))")
-    public void after(){
-        System.out.println("方法调用后");
-    }
+
     @Around("execution(* com.neuedu.controller.*.*(..))")
     public Object around(ProceedingJoinPoint joinPoint ) throws Throwable {
         Object result=null;
